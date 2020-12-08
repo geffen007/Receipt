@@ -1,17 +1,8 @@
-composer require --dev phpunit/phpunit ^9.5
-
-vendor/bin/phpunit tests/LinesTest.php
-
-
-Markdown
-Preview
-Toggle Mode
-
 <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Esercizio_0"></a>Esercizio</h1>
 <p class="has-line-data" data-line-start="2" data-line-end="3">Scopo:</p>
 <ul>
 <li class="has-line-data" data-line-start="3" data-line-end="4">Calcolo della tassazione (“basic sales tax” e “import duty”) di ogni singolo prodotto,</li>
-<li class="has-line-data" data-line-start="4" data-line-end="5">Calcolo dei totali (netto, )</li>
+<li class="has-line-data" data-line-start="4" data-line-end="5">Calcolo dei totali (net, taxes, total)</li>
 <li class="has-line-data" data-line-start="5" data-line-end="7">Stampa per singola ricevuta</li>
 </ul>
 <h1 class="code-line" data-line-start=7 data-line-end=8 ><a id="PHP_74_7"></a>PHP 7.4</h1>
