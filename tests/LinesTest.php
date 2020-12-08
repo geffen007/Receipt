@@ -15,15 +15,15 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
+
 require_once 'classes/Taxes.php';
 require_once 'classes/Line.php';
-// require_once 'classes/Receipt.php';
-use PHPUnit\Framework\TestCase;
 
+use PHPUnit\Framework\TestCase;
 
 class LinesTest extends TestCase
 {
-public function outputData()
+    public function outputData()
     {
 
         return  [
@@ -45,14 +45,14 @@ public function outputData()
 
     public function testLine($quantity, $description, $price, $salesTax, $dutyTax, $net, $taxes, $total) 
     {
-        /* Create a Receipt Line. */
+        //Crea Line
         $receiptLine = new Line($quantity, $description, $price, $salesTax, $dutyTax);
 
-        /* Assert that input values set in the constructor are well stored.*/
+        //Verifica che i valori di input corrispondano
         $this->assertSame($quantity, $receiptLine->getQuantity());
         $this->assertSame($description, $receiptLine->getProduct());
 
-        /* Assert that calculated fields after call the constructor are well. */
+        //Verifa che le funzioni per i totali corrispondano
         $this->assertSame($net, $receiptLine->getNet());
         $this->assertSame($taxes, $receiptLine->getTaxes());
         $this->assertSame($total, $receiptLine->getTotal());

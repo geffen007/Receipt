@@ -14,6 +14,7 @@
 <p class="has-line-data" data-line-start="14" data-line-end="15">per lanciare il test, eseguire da linea di comando (per il primo comando è richiesto composer).</p>
 <pre><code class="has-line-data" data-line-start="16" data-line-end="19" class="language-sh">$ composer require --dev phpunit/phpunit ^<span class="hljs-number">9.5</span>
 $ vendor/bin/phpunit tests/LinesTest.php
+$ vendor/bin/phpunit tests/ReceiptTest.php
 </code></pre>
 <h2 class="code-line" data-line-start=21 data-line-end=23 ><a id="License_21"></a>License</h2>
 <p class="has-line-data" data-line-start="24" data-line-end="25">APACHE</p>

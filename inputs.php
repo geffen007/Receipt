@@ -44,14 +44,14 @@ $inputs =
   [
      [
       'quantity' => 1,
-      'product_name' => 'box of chocolates',
+      'product_name' => 'imported box of chocolates',
       'price' => 10.00,
       'type' => 'food',
       'imported' => true
     ],
     [
       'quantity' => 1,
-      'product_name' => 'bottle of perfume',
+      'product_name' => 'imported bottle of perfume',
       'price' => 47.50,
       'type' => 'item',
       'imported' => true
@@ -61,7 +61,7 @@ $inputs =
   [
      [
       'quantity' => 1,
-      'product_name' => 'bottle of perfume',
+      'product_name' => 'imported bottle of perfume',
       'price' => 27.99,
       'type' => 'item',
       'imported' => true
@@ -82,7 +82,7 @@ $inputs =
     ],
     [
       'quantity' => 3,
-      'product_name' => 'box of chocolates',
+      'product_name' => 'imported box of chocolates',
       'price' => 11.25,
       'type' => 'food',
       'imported' => true
