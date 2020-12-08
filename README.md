@@ -11,7 +11,7 @@
 </ul>
 <p class="has-line-data" data-line-start="11" data-line-end="12">Per eseguire il programma aprire il file app.php su server</p>
 <h1 class="code-line" data-line-start=13 data-line-end=14 ><a id="PHP_UNIT_95_13"></a>PHP UNIT 9.5</h1>
-<p class="has-line-data" data-line-start="14" data-line-end="15">per lanciare il test, eseguire da linea di comando (per il primo comando è richiesto composer).</p>
+<p class="has-line-data" data-line-start="14" data-line-end="15">Per lanciare i test, eseguire da linea di comando.</p>
 <pre><code class="has-line-data" data-line-start="16" data-line-end="19" class="language-sh">$ composer require --dev phpunit/phpunit ^<span class="hljs-number">9.5</span>
 $ vendor/bin/phpunit tests/LinesTest.php
 $ vendor/bin/phpunit tests/ReceiptTest.php
