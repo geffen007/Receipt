@@ -16,5 +16,5 @@
 $ vendor/bin/phpunit tests/LinesTest.php
 </code></pre>
 <h2 class="code-line" data-line-start=21 data-line-end=23 ><a id="License_21"></a>License</h2>
-<p class="has-line-data" data-line-start="24" data-line-end="25">MIT</p>
+<p class="has-line-data" data-line-start="24" data-line-end="25">APACHE</p>
 
