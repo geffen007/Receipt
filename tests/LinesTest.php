@@ -45,10 +45,9 @@ class LinesTest extends TestCase
 
     public function testLine($quantity, $description, $price, $salesTax, $dutyTax, $net, $taxes, $total) 
     {
-        //Crea Line
         $receiptLine = new Line($quantity, $description, $price, $salesTax, $dutyTax);
 
-        //Verifica che i valori di input corrispondano
+        //Verifica che i valori corrispondano
         $this->assertSame($quantity, $receiptLine->getQuantity());
         $this->assertSame($description, $receiptLine->getProduct());
 

@@ -29,25 +29,25 @@ class ReceiptTest extends TestCase
     return  [
       [
         [
-          [ 2, 'book',          12.49, 0.00, 0.00, 24.98, 0.00, 24.98 ],
-          [ 1, 'music CD',      14.99, 0.10, 0.00, 14.99, 1.50, 16.49 ],
-          [ 1, 'chocolate bar',  0.85, 0.00, 0.00,  0.85, 0.00,  0.85 ]
+          [ 2, 'book',                        12.49, 0.00, 0.00, 24.98, 0.00, 24.98 ],
+          [ 1, 'music CD',                    14.99, 0.10, 0.00, 14.99, 1.50, 16.49 ],
+          [ 1, 'chocolate bar',                0.85, 0.00, 0.00,  0.85, 0.00,  0.85 ]
         ],
         40.82, 1.50, 42.32
       ],
       [
         [
-          [ 1, 'imported box of chocolates', 10.00, 0.00, 0.05, 10.00, 0.50, 10.50 ],
-          [ 1, 'imported bottle of perfume', 47.50, 0.10, 0.05, 47.50, 7.15, 54.65 ]
+          [ 1, 'imported box of chocolates',  10.00, 0.00, 0.05, 10.00, 0.50, 10.50 ],
+          [ 1, 'imported bottle of perfume',  47.50, 0.10, 0.05, 47.50, 7.15, 54.65 ]
         ],
         57.50, 7.65, 65.15
       ],
       [
         [
-          [ 1, 'imported bottle of perfume', 27.99, 0.10, 0.05, 27.99, 4.20, 32.19 ],
-          [ 1, 'bottle of perfume',          18.99, 0.10, 0.00, 18.99, 1.90, 20.89 ],
-          [ 1, 'packet of headache pills',    9.75, 0.00, 0.00,  9.75, 0.00,  9.75 ],
-          [ 3, 'box of imported chocolates', 11.25, 0.00, 0.05, 33.75, 1.80, 35.55 ]
+          [ 1, 'imported bottle of perfume',  27.99, 0.10, 0.05, 27.99, 4.20, 32.19 ],
+          [ 1, 'bottle of perfume',           18.99, 0.10, 0.00, 18.99, 1.90, 20.89 ],
+          [ 1, 'packet of headache pills',     9.75, 0.00, 0.00,  9.75, 0.00,  9.75 ],
+          [ 3, 'box of imported chocolates',  11.25, 0.00, 0.05, 33.75, 1.80, 35.55 ]
         ],
         90.48, 7.90, 98.38
       ]
@@ -70,7 +70,6 @@ class ReceiptTest extends TestCase
       
       $this->assertSame($line[0], $receiptLine->getQuantity());
       $this->assertSame($line[1], $receiptLine->getProduct());
-
       
       $this->assertSame($line[5], $receiptLine->getNet());
       $this->assertSame($line[6], $receiptLine->getTaxes());
@@ -80,5 +79,5 @@ class ReceiptTest extends TestCase
     $this->assertSame($net, $receipt->getNet());
     $this->assertSame($taxes, $receipt->getTaxes());
     $this->assertSame($total, $receipt->getTotal());
-}
+  } 
 }
