@@ -47,7 +47,7 @@ class Line
     
   }
 
-  //creo le funzioni che mi serviranno per la stampa
+  //Creo le funzioni che mi serviranno per la stampa
   public function getQuantity()
   {
     return $this->quantity;

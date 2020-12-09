@@ -63,7 +63,7 @@ class ReceiptTest extends TestCase
 
     $receipt = new Receipt();
 
-    foreach ($lines as $key => $line) 
+    foreach ($lines as $line) 
     {
 
       $receiptLine = $receipt->addLine($line[0], $line[1], $line[2], $line[3], $line[4]);
