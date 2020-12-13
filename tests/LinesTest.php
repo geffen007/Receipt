@@ -51,7 +51,7 @@ class LinesTest extends TestCase
         $this->assertSame($quantity, $receiptLine->getQuantity());
         $this->assertSame($description, $receiptLine->getProduct());
 
-        //Verifa che le funzioni per i totali corrispondano
+        //Verifica che le funzioni per i totali corrispondano
         $this->assertSame($net, $receiptLine->getNet());
         $this->assertSame($taxes, $receiptLine->getTaxes());
         $this->assertSame($total, $receiptLine->getTotal());

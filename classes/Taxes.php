@@ -38,7 +38,7 @@ trait Taxes
   //Se il prodotto è importato restituisce , 
   //modificabile in futuro aggiungendo altre voci o anche altre tassazioni con ifelse
   public function imported($duty){
-    if ($duty){
+    if ($duty == 'true'){
       return 0.05;
     } else {
       return 0;

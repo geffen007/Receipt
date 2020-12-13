@@ -24,7 +24,7 @@ require_once 'classes/Taxes.php';
 require_once 'classes/Line.php';
 require_once 'classes/Receipt.php';
 
-//scorro il nostro database in modo da creare le istanze
+//scorro il database in modo da creare le istanze
 foreach ($inputs as $key => $input) {
 
     // per ogni key creo una nuova istanza, in questo caso 3
@@ -42,11 +42,11 @@ foreach ($inputs as $key => $input) {
         $duty = $line['imported'];
         $line = $receipt->addLine($quantity, $productName, $price, $type, $duty); 
 
-        //pusho le singole linee nel array che si svuoterà
+        //pusho le singole linee nell'array che si svuoterà
         $lines[] = $line;  
     }
 
-    //salvo l'array in un array che conterrà tutte le voci delle ricevute divise per ricevute
+    //salvo l'array in un array che conterrà tutte le voci divise per ricevute
     $receipts[$key] = $lines;
 
     //distruggo l'array che non mi serve più

@@ -1,0 +1,189 @@
+/** @license 
+/*  Copyright 2020 Guido Amodio
+/*
+/*  Licensed under the Apache License, Version 2.0 (the "License");
+/*  you may not use this file except in compliance with the License.
+/*  You may obtain a copy of the License at
+/*
+/*    http://www.apache.org/licenses/LICENSE-2.0
+/*
+/*  Unless required by applicable law or agreed to in writing, software
+/*  distributed under the License is distributed on an "AS IS" BASIS,
+/*  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+/*  See the License for the specific language governing permissions and
+/*  limitations under the License.
+/*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.clearfix {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+body{
+  font-family: 'Krona One', sans-serif;
+}
+
+.container{
+  width: 100vw;
+  max-width: 1200px;
+  height: 100%;
+  max-height: 800px;
+  margin: 0 auto;
+  overflow-y: hidden;
+  padding: 5px;
+}
+
+/* ___________Left_______________ */
+
+#left{
+  float:left;
+  width: 50%;
+  height: 100%;
+  display: flex;
+}
+
+#left .newitem{
+  width: 100%;
+}
+
+#left .newitem .top{
+  height: 30px;
+  background-color: #e7e7e7;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+
+#left .newitem input,
+#left .newitem select
+{
+  width: 100%;
+  background-color: #2b2b2b;
+  height: 40px;
+  color: white;
+  font-family: 'Krona One', sans-serif;
+  padding-left: 10px;
+}
+
+#addvoice{
+  width: 100%;
+  height: 50px;
+  background-color: rgb(46, 46, 212);
+  font-family: 'Krona One', sans-serif;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+#addvoice:hover{
+  background-color: rgb(104, 104, 228);
+}
+
+/* ___________Right_______________ */
+#right{
+  float:right;
+  width: 50%;
+  height: 100%;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* _______________________preview________________________ */
+
+#preview{
+  width: 100%;
+  margin: 0 0 5px 0;
+  height: 600px;
+  overflow-y: auto;
+  border: 1px solid black;
+  font-family: 'Courier Prime', monospace;
+  position: relative
+}
+
+#preview th{
+  text-align: left;
+}
+
+#preview table, #preview tr{
+  width: 100%;
+  border-bottom: 1px solid darkgray;
+  border-collapse: collapse;
+  padding: 2px;
+}
+
+#preview .totals{
+  background-color: #252525;
+  color: white;
+  text-align: right;
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  left: 0;
+  padding: 10px;
+}
+
+
+/* _________________print_____________ */
+
+#print{
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+}
+#print button{
+  width: 50%;
+  height: 100%;
+  border-style: none;
+  text-align: center;
+  line-height: 100%;
+  float: left;
+  font-family: 'Krona One', sans-serif;
+  font-size: 25px;
+  color: white;
+} 
+
+#print .delete{
+  width: 50%;
+  height: 100%;
+  border-style: none;
+  text-align: center;
+  line-height: 80px;
+  float: left;
+  font-family: 'Krona One', sans-serif;
+  font-size: 25px;
+  color: white;
+  background-color: red;
+  cursor: pointer;
+}
+
+#print .delete:hover{
+  background-color: rgb(245, 100, 100);
+}
+
+#print .send{
+  background-color: green;
+  cursor: pointer;
+}
+
+#print .send:hover{
+  background-color: rgb(101, 216, 101);
+}
+
+.euro{
+  font-size: 20px;
+}
+.euro::before{
+  content:"€";
+}

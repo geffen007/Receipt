@@ -22,7 +22,7 @@ class Line
   use Taxes;
 
   //Dichiaro le variabili che mi servono per creare la classe
-  private $quantity ;
+  protected $quantity ;
   private $productName ;
   private $price;
   private $salesTax;

@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.clearfix {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+body{
+  font-family: 'Courier Prime', monospace;
+  background-color: rgb(49, 49, 49);
+}
+
+.container{
+  background-color: rgb(235, 229, 229);
+  text-align: center;
+  width: 300px;
+  margin: 20px auto;
+  padding: 40px
+}
+table{
+  width: 100%;
+  text-align: left;
+}
+td{
+  text-transform: capitalize;
+}
+
+.tot{
+  text-align: right;
+}
+.tot::before{
+  content: "€";
+}
+
+.right{
+  text-align: right;
+}
+
+.p{
+  padding-top: 20px;
+}

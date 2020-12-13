@@ -1,0 +1,111 @@
+<!-- 
+  ** @license 
+ *  Copyright 2020 Guido Amodio
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet"> 
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- HandleBars -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw==" crossorigin="anonymous"></script>
+  
+  <title>Registratore di Cassa</title>
+</head>
+<body>
+  <div class="container">
+    <div id="left">
+      <div class="items">
+        <div class="newitem">
+          <div class="top">
+            <h4>Aggiungi un prodotto</h4>
+          </div> 
+          <input type="text" id="i-name" name="i-name" value="" placeholder="Nome del prodotto" required><br>
+          <input type="text" id="i-quantity" name="i-quantity" value="" placeholder="Quantità" required><br>
+          <input type="text" id="i-price" name="i-price" value="" placeholder="Prezzo netto al pezzo" required><br>
+          <small>Tipo di prodotto</small>
+          <select name="i-type" id="i-type">
+            <option value="books">Libri</option>
+            <option value="food">Cibo</option>
+            <option value="medical">Medicinali</option>
+            <option value="other">Altri</option>
+          </select>
+          <small>Provenienza</small>
+          <select name="i-duty" id="i-duty">
+            <option value="false">Unione Europea</option>
+            <option value="true">Extra UE</option>
+          </select>
+          <div id="addvoice" >+</div>
+        </div>
+      </div>
+    </div>
+    <div id="right">        
+      <div id="preview">
+        <form action="appindex.php" method="POST">
+          <table>
+            <tbody id="t-pre">
+              <tr >
+                <th>Qt</th>
+                <th>Prodotto</th>
+                <th>Tasse</th>
+                <th>€ unit/netto</th>
+                <th>TOT</th>
+              </tr>
+            </tbody>
+          </table>
+          <div class="totals">
+            <h4>Tasse:</h4> 
+            <span id="taxtotal" class="euro">0</span>
+            <h2>Totale:</h2>
+            <span id="maintotal" class="euro">0</span>
+          </div>
+          <div id="print">
+            <div id="delete" class="delete">CANCELLA</div>
+            <button type="submit" class="send">STAMPA SCONTRINO</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- script di handlebars che si clonerà al click  -->
+  <script id="template-row" type="text/x-handlebars-template">
+    <tr class="rows">
+      <input type="hidden" class="form-control" name="duty[]" value="{{duty}}" >
+      <td><input type="hidden" class="form-control" name="quantity[]" value="{{quantity}}" readonly>x{{quantity}}</td>
+      <td><input type="hidden" class="form-control" name="productName[]" value="{{name}}" readonly>{{name}}</td>
+      <td>{{tax}}</td>
+      <td><input type="hidden" class="form-control" name="price[]" value="{{price}}" readonly>{{price}}€</td>
+      <td>{{total}}€</td>
+      <input type="hidden" class="form-control" name="type[]" value="{{type}}">
+    </tr>
+  </script>
+
+  <!-- collegamento al file js -->
+  <script src="js/script.js" charset="utf-8"></script>
+</body>
+</html>
